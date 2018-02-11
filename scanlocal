@@ -1,0 +1,10 @@
+#!/bin/bash
+
+interface=$1
+
+if [ -z "$interface" ]
+then
+   interface="wlp3s0";
+fi
+
+sudo arp-scan --interface=$interface --localnet 
